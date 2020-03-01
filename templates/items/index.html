@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<header>
+    <h1>Items</h1>
+</header>
+<section>
+    <div class="list-group mb-3">
+        <!-- using for loop -->
+        {% for item in items %}
+            <div class="list-group-item">
+                <h4>Item</h4>
+                <p>
+                    <a href="{{item.url}}" class="">{{ item.url}}</a>
+                </p>
+
+            </div>
+
+        {% endfor %}
+    </div>
+
+    <!-- 有點神妙 表示前往 items 這個藍圖的new_item方法-->
+    <a class="btn btn-primary mb-3" href="{{ url_for('items.new_item') }}"> 
+        create new item
+    </a>
+
+
+</section>
+
+{% endblock %}
