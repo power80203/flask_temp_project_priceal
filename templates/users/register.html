@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <header> <h1>Register</h1></header>
+
+    <section class="create-item-form" >
+
+        <form method="post">
+            <div class="form-group">
+                <label for="email" >URL</label>
+                <input type="text" class="form-control" id = "email" name="email " placeholder="XXXX@test.com.tw">
+            </div>
+            <div class="form-group">
+                <label for="password" >password</label>
+                <input type="text" class="form-control" id = "password" name="password" placeholder="span">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+
+        </form>
+
+    </section>
+
+
+
+{% endblock %}
+
